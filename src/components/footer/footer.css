@@ -1,0 +1,22 @@
+.footer{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(208, 180, 235);
+}
+
+.footerblue {
+  background-color: blue;
+  height: 60px;
+  width: 100%;
+}
+
+.cool {
+  height: 1000px;
+  width: 100%;
+}
+
+.footerpurple {
+  background-color: purple;
+  height: 60px;
+  width: 100%;
+}

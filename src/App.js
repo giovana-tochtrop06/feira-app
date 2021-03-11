@@ -1,19 +1,20 @@
+//LIB EXTERNA 
 import React from 'react';
+import { Button, Container } from 'react-bootstrap';
+
+//IMPORTS INTERNOS 
 import './app.css';
 import Header from './components/header/Header';
-import { Button } from 'react-bootstrap';
 import Footer from './components/footer/Footer';
 
-function App() {
-  const name = 'gi';
+const App = () => {
   return (
-    <div>
-      <Header></Header>
-
-      <Button variant="primary">Primary</Button>
+    <Container>
+      <Header />
       
-      <Footer></Footer>
-    </div>
+      <Footer footerColor="blue"/>
+      <Footer footerColor="purple" content="olá"/>
+    </Container>
   );
 }
 
