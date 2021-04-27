@@ -1,0 +1,26 @@
+.yellow {
+    background-color: rgb(255, 185, 79) !important;
+    padding: 20px 30px;
+    margin: 5px;
+    border: unset;
+    border-radius: 5px;
+    justify-content: center !important;
+}
+
+.green {
+    background-color: rgb(255, 185, 79) !important;
+    padding: 20px 30px;
+    margin: 5px;
+    border: unset;
+    border-radius: 5px;
+    justify-content: center !important;
+}
+
+.red {
+    background-color: rgb(255, 185, 79) !important;
+    padding: 20px 30px;
+    margin: 5px;
+    border: unset;
+    border-radius: 5px;
+    justify-content: center !important;
+}

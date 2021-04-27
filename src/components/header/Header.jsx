@@ -1,23 +1,27 @@
 import React from 'react';
-import { Jumbotron, Button, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col, Form, FormControl, Nav } from 'react-bootstrap';
 
 import './header.css';
 
 const Header = () => {
   return(
-    <Row>
-      <Col>
-        <Jumbotron>
-          <h1>Hello, world!</h1>
-          <p>
-            This is a simple hero unit, a simple jumbotron-style component for calling
-            extra attention to featured content or information.
-          </p>
-          <p>
-            <Button variant="primary">Learn more</Button>
-          </p>
-        </Jumbotron>
+    <Row className="header">
+
+      <Col sm={4}>
+        <h1 className="logo">Feira Virtual</h1>
       </Col>
+
+      <Col sm={8} className="row">
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#features">Login</Nav.Link>
+        </Nav>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <Button variant="outline-primary">Search</Button>
+        </Form>
+      </Col>
+
     </Row>
   );  
 };

@@ -1,5 +1,6 @@
-.header {
-    height: 40px;
-    background-color: red;
-    width: 100%;
+.fruts {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

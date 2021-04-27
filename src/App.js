@@ -1,19 +1,46 @@
 //LIB EXTERNA 
 import React from 'react';
-import { Button, Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 //IMPORTS INTERNOS 
 import './app.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import GiButton from './components/gibutton/GiButton';
+import Separator from './components/separator/Separator';
+import Sum from './components/sum/Sum';
+import Title from './components/tiltle/Title';
+import Table from './components/table/Table';
+import For from './components/for/For';
 
 const App = () => {
   return (
-    <Container>
+    <Container className="backcontainer">
       <Header />
+
+      <Col>
+        <Row className="fruts">
+          <GiButton type="green"> Especiarias </GiButton>
+          <GiButton type="red"> Frutas </GiButton>
+          <GiButton type="yellow"> Verduras </GiButton>
+        </Row>
+      </Col>
+
+      <Separator/>
+
+      <For/>
+
+      {/* <Title type="primary">Este é um exemplo de primary</Title>
+      <Title type="secondary">Este é um exemplo de secondary</Title>
+      <Title type="normal">Este é um exemplo de normal</Title>
       
-      <Footer footerColor="blue"/>
-      <Footer footerColor="purple" content="olá"/>
+      <Sum number1={1} number2={5}/> */}
+
+      <Footer/>
+
+      {/* <Footer footerColor="blue" footerTextColor="white"> Opa, boa tarde!</Footer>
+      <Footer footerColor="purple" footerTextColor="black" showRights> Opa, boa tarde!</Footer> */}
+
     </Container>
   );
 }

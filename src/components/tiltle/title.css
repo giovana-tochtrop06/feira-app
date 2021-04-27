@@ -1,0 +1,16 @@
+.primary {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(31, 31, 31)
+}
+  
+.secondary {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(51, 51, 51)
+}
+
+.normal {
+  font-size: 18px;
+  color: rgb(94, 91, 91)
+}
