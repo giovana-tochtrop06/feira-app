@@ -2,7 +2,7 @@ import React from 'react';
 
 import './sum.css'
 
-const Sum = ({ number1, number2 }) => { 
+const Sum = ({number1, number2}) => { 
     return (
         <div>
             <div>
