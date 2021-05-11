@@ -1,11 +1,56 @@
-import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import React, {useState} from 'react';
+import { Row, Col, Table, Button } from 'react-bootstrap';
 
 const Frutas = () => {
+  const [total, setTotal] = useState(0);
+
+  const list = [
+    {fruit: 'Morango 1kg', price: 4},
+    {fruit: 'Abacaxi 1kg', price: 5},
+    {fruit: 'Laranja 1kg', price: 3},
+    {fruit: 'Banana 1kg', price: 4},
+    {fruit: 'Maracujá 1kg', price: 6},
+  ]
+
+  const ListRow = ({fruit, price}) => {
+    const onClick = () => {
+      setTotal(price + total);
+    }
+
+    return(
+      <tr>
+        <td>{fruit}</td>
+        <td>R$ {price}</td>
+        <td>
+          <Button variant="outline-warning" onClick={onClick}>Adicionar</Button>
+        </td>
+      </tr>
+    )
+  }
+
   return(
     <Row>
-      <Col>
-        frutas
+      <Col md={{span: 8, offset: 2}}>
+        <Table striped bordered hover>
+          <thead>
+            <th>Frutas</th>
+            <th>Preço</th>
+            <th></th>
+          </thead>
+          <tbody>
+            {list.map((listinha) =>
+              <ListRow fruit={listinha.fruit} price={listinha.price} />
+            )}
+          </tbody>
+          <tr>
+            <td colSpan={2}>
+              Total:
+            </td>
+            <td>
+              R$ {total}
+            </td>
+          </tr>
+        </Table>
       </Col>
     </Row>
   )
