@@ -46,7 +46,7 @@ const Especiarias = () => {
           )}
           </tbody>
           <tr>
-            <td colSpan={2}>
+            <td>
               Total:
             </td>
             <td>

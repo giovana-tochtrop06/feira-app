@@ -44,7 +44,7 @@ const Frutas = () => {
             )}
           </tbody>
           <tr>
-            <td colSpan={1}>
+            <td>
               Total:
             </td>
             <td>
