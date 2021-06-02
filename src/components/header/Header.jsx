@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Row, Col, Form, FormControl, Nav } from 'react-bootstrap';
+import { Row, Col, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
 import './header.css';
 
 const Header = () => {
@@ -12,7 +13,7 @@ const Header = () => {
         </Link>
       </Col>
 
-      <Col sm={8} >
+      <Col sm={8}>
         <Nav className="mr-auto justify-content-end">
           <Link to="/">
             <Nav.Link href="#home">Home</Nav.Link>

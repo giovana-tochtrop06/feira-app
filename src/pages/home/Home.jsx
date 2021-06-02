@@ -1,5 +1,5 @@
 import React from 'react';
-import GiButton from '../../components/gibutton/GiButton';
+import Button from '../../components/gibutton/Button';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 
@@ -10,19 +10,19 @@ const Home = () => {
     <Row className="center">
       <Col md={{span: 6, offset: 3}}>
         <Link to="/especiarias">
-            <GiButton>
+            <Button>
               Especiarias
-            </GiButton>
+            </Button>
           </Link>
           <Link to="/frutas">
-            <GiButton>
+            <Button>
               Frutas
-            </GiButton>
+            </Button>
           </Link>
           <Link to="/legumes">
-            <GiButton>
+            <Button>
               Legumes
-            </GiButton>
+            </Button>
         </Link>
       </Col>
     </Row>
