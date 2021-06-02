@@ -12,10 +12,13 @@ const Header = () => {
         </Link>
       </Col>
 
-      <Col sm={8} className="row">
-        <Nav className="mr-auto">
+      <Col sm={8} >
+        <Nav className="mr-auto justify-content-end">
           <Link to="/">
             <Nav.Link href="#home">Home</Nav.Link>
+          </Link>
+          <Link to="/carrinho">
+            <Nav.Link href="#carrinho">Carrinho</Nav.Link>
           </Link>
           <Link to="/cadastrar">
             <Nav.Link href="#cadastrar">Cadastrar</Nav.Link>

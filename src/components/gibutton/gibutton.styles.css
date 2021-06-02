@@ -1,6 +1,6 @@
 .yellow {
-    background-color: rgb(255, 185, 79) !important;
-    padding: 20px 30px;
+    background-color: #a2ad91 !important;
+    padding: 30px 50px;
     margin: 5px;
     border: unset;
     border-radius: 5px;
@@ -8,8 +8,8 @@
 }
 
 .green {
-    background-color: rgb(255, 185, 79) !important;
-    padding: 20px 30px;
+    background-color: #a2ad91 !important;
+    padding: 30px 50px;
     margin: 5px;
     border: unset;
     border-radius: 5px;
@@ -17,9 +17,9 @@
 }
 
 .red {
-    background-color: rgb(255, 185, 79) !important;
-    padding: 20px 30px;
-    margin: 15px;
+    background-color: #a2ad91 !important;
+    padding: 30px 50px;
+    margin: 5px;
     border: unset;
     border-radius: 5px;
     justify-content: center !important;

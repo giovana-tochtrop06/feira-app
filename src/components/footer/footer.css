@@ -1,10 +1,11 @@
 .footer{
   width: 100%;
   min-height: 60px;
-  background-color: rgb(255, 189, 89);
+  background-color: #a2ad91;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 /* IF ESTUDOS */

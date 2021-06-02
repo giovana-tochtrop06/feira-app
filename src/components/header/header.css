@@ -1,15 +1,19 @@
 .header{
     width: 100%;
     height: 100px;
-    background-color: rgb(255, 189, 89);
+    background-color: #a2ad91;
     display: flex;
     align-items: center;
     margin: 0px !important;
+    border-radius: 5px;
 }
 
+.left {
+    justify-content: right !important;
+}
 
 .backcontainer{
-    background-color: rgb(255, 236, 209);
+    background-color: rgb(97, 89, 89);
     padding: 0px !important;
 }
 

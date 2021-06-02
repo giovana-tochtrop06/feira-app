@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Row, Col, Table, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Especiarias = () => {
   const [total, setTotal] = useState(0);
@@ -50,6 +51,11 @@ const Especiarias = () => {
             </td>
             <td>
               R$ {total}
+            </td>
+            <td>
+              <Link to="/carrinho">
+                <Button variant="outline-warning">Finalizar</Button>
+              </Link>
             </td>
           </tr>
         </Table>
