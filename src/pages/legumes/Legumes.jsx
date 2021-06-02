@@ -11,12 +11,12 @@ const Legumes = () => {
     {vegetable: 'Beterraba 1kg', price: 4},
     {vegetable: 'Pimentão 1kg', price: 9},
     {vegetable: 'Cenoura 1kg', price: 7},
-  ]
+  ];
 
   const ListRow = ({vegetable, price}) => {
     const onClick = () => {
       setTotal(price + total);
-    }
+    };
 
     return(
       <tr>
@@ -27,7 +27,7 @@ const Legumes = () => {
         </td>
       </tr>   
     )
-  }
+  };
 
   return(
     <Row>
@@ -62,8 +62,6 @@ const Legumes = () => {
       </Col>
     </Row>
   )
-}
-
-
+};
 
 export default Legumes;
