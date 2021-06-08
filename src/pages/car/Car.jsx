@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Car = () => {
   const total = [
@@ -34,7 +35,9 @@ const Car = () => {
           </tr>
         </tbody>
       </Table>
-      <Button> Pagar </Button>
+      <Link to="/checkout">
+        <Button> Pagar </Button>
+      </Link>
     </div>
   );
 };
