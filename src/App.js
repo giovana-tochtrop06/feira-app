@@ -13,6 +13,7 @@ import Especiarias from './pages/especiarias/Especiarias';
 import Legumes from './pages/legumes/Legumes';
 import Frutas from './pages/frutas/Frutas';
 import Car from './pages/car/Car';
+import Checkout from './pages/checkout/Checkout';
 
 const App = () => {
   return (
@@ -40,6 +41,9 @@ const App = () => {
           </Route>
           <Route path="/carrinho">
             <Car />
+          </Route>
+          <Route path="/checkout" exact>
+            <Checkout />
           </Route>
           <Route path="/" exact>
             <Home />
