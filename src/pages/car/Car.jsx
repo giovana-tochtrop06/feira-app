@@ -3,9 +3,9 @@ import { Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Car = () => {
-  const total = [
-
-  ];
+  const especiariasValue = parseInt(localStorage.getItem('especiarias') || 0);
+  const frutasValue = parseInt(localStorage.getItem('frutas') || 0);
+  const legumesValue = parseInt(localStorage.getItem('legumes') || 0);
 
   return(
     <div className="App">
@@ -19,19 +19,19 @@ const Car = () => {
         <tbody>
           <tr>
             <td>Especiarias</td>
-            <td>56</td>
+            <td>R$ {especiariasValue}</td>
           </tr>
           <tr>
             <td>Frutas</td>
-            <td>56</td>
+            <td>R$ {frutasValue}</td>
           </tr>
           <tr>
             <td>Legumes</td>
-            <td>56</td>
+            <td>R$ {legumesValue}</td>
           </tr>
           <tr>
             <td>Total:</td>
-            <td>56</td>
+            <td>R$ {legumesValue + frutasValue + especiariasValue}</td>
           </tr>
         </tbody>
       </Table>

@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Row, Col, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Frutas = () => {
-  const [total, setTotal] = useState(0);
+  const initialValue = parseInt(localStorage.getItem('frutas') || 0);
+  const [total, setTotal] = useState(initialValue);
+  useEffect(() => {
+    saveValue();
+  },[total]);
 
   const list = [
     {fruit: 'Morango 1kg', price: 4},
@@ -12,6 +16,10 @@ const Frutas = () => {
     {fruit: 'Banana 1kg', price: 4},
     {fruit: 'Maracujá 1kg', price: 6},
   ]
+
+  const saveValue = () => {
+    localStorage.setItem('frutas', total)
+  }
 
   const ListRow = ({fruit, price}) => {
     const onClick = () => {

@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Row, Col, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Especiarias = () => {
-  const [total, setTotal] = useState(0);
+  const initialValue = parseInt(localStorage.getItem('especiarias') || 0);
+  const [total, setTotal] = useState(initialValue);
+  useEffect(() => {
+    saveValue();
+  },[total]);
 
   const list = [
     {spice: 'Açafrão 100g', price: 15},
@@ -12,6 +16,10 @@ const Especiarias = () => {
     {spice: 'Noz Moscada 100g', price: 12},
     {spice: 'Pimenta do Reino 100g', price: 11},
   ]
+
+  const saveValue = () => {
+    localStorage.setItem('especiarias', total)
+  }
   
   const ListRow = ({spice, price}) => {
     const onClick = () => {
