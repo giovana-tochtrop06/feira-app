@@ -1,15 +1,23 @@
 import React from 'react';
 import { Form, Col, Button, Row } from 'react-bootstrap';
+import getValue from '../../helpers/getValue';
+
 import "./checkout.css";
 
 const Checkout = () => {
-  const onClick = () => {
-    localStorage.setItem('Test', 'ola');
-  }
+  const total = getValue('total');
+
   return(
     <Row className="margin">
       <Col md={{span: 8, offset: 2}}>
         <Form>
+          <Form.Row>
+            <Form.Group as={Col}>
+              <Form.Label>TOTAL</Form.Label>
+              <Form.Control type="tel" value={`R$ ${total}`} readOnly/>
+            </Form.Group>
+          </Form.Row>
+
           <Form.Row>
             <Form.Group as={Col} md={8}>
               <Form.Label>NOME COMPLETO</Form.Label>
@@ -52,14 +60,17 @@ const Checkout = () => {
             </Col>
             <Col as={Col}>
               <Form.Check
+                name="paymentMethod"
                 type="radio"
                 label="CARTÃO DE CRÉDITO"
               />
               <Form.Check
+                name="paymentMethod"
                 type="radio"
                 label="CARTÃO DE DÉBITO"
               />
               <Form.Check
+                name="paymentMethod"
                 type="radio"
                 label="PIX"
               />              

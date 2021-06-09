@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { Row, Col, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import getValue from '../../helpers/getValue';
  
 const Legumes = () => {
-  const initialValue = parseInt(localStorage.getItem('legumes') || 0);
+  const initialValue = getValue('legumes');
   const [total, setTotal] = useState(initialValue);
   useEffect(() => {
     saveValue();

@@ -1,11 +1,17 @@
 import React from 'react';
 import { Table, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import getValue from '../../helpers/getValue';
 
-const Car = () => {
-  const especiariasValue = parseInt(localStorage.getItem('especiarias') || 0);
-  const frutasValue = parseInt(localStorage.getItem('frutas') || 0);
-  const legumesValue = parseInt(localStorage.getItem('legumes') || 0);
+const Car = ({history}) => {
+  const especiariasValue = getValue('especiarias');
+  const frutasValue = getValue('frutas');
+  const legumesValue = getValue('legumes');
+
+  const onPayment = () => {
+    localStorage.setItem("total", legumesValue + frutasValue + especiariasValue);
+    history.push('/checkout');
+  };
 
   return(
     <div className="App">
@@ -35,11 +41,9 @@ const Car = () => {
           </tr>
         </tbody>
       </Table>
-      <Link to="/checkout">
-        <Button> Pagar </Button>
-      </Link>
+        <Button onClick={onPayment}> Pagar </Button>
     </div>
   );
 };
 
-export default Car;
+export default withRouter(Car);
